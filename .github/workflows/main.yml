@@ -17,25 +17,25 @@ jobs:
       - name: Generate App Key
         run: php artisan key:generate
 
-      - name: Cache configuration
-        run: php artisan config:cache
+      # - name: Cache configuration
+      #   run: php artisan config:cache
 
-      - name: Optimize application
-        run: php artisan optimize
+      # - name: Optimize application
+      #   run: php artisan optimize
 
-      - name: Clear application cache
-        run: php artisan cache:clear
+      # - name: Clear application cache
+      #   run: php artisan cache:clear
 
-      - name: Cache routes
-        run: php artisan route:cache
+      # - name: Cache routes
+      #   run: php artisan route:cache
 
-      - name: Clear compiled views
-        run: php artisan view:clear
+      # - name: Clear compiled views
+      #   run: php artisan view:clear
 
-      - name: Set permissions for storage and bootstrap cache
-        run: |
-          chmod -R 775 storage
-          chmod -R 775 bootstrap/cache
+      # - name: Set permissions for storage and bootstrap cache
+      #   run: |
+      #     chmod -R 775 storage
+      #     chmod -R 775 bootstrap/cache
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
