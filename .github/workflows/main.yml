@@ -20,8 +20,8 @@ jobs:
       # - name: Cache configuration
       #   run: php artisan config:cache
 
-      # - name: Optimize application
-      #   run: php artisan optimize
+      - name: Optimize application
+        run: php artisan optimize
 
       # - name: Clear application cache
       #   run: php artisan cache:clear
