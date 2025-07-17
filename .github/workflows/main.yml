@@ -32,6 +32,11 @@ jobs:
       - name: Clear compiled views
         run: php artisan view:clear
 
+      - name: Set permissions for storage and bootstrap cache
+        run: |
+          chmod -R 775 storage
+          chmod -R 775 bootstrap/cache
+
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
